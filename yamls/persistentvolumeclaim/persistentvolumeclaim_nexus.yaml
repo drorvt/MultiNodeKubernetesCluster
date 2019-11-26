@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"60e54cfd-0f91-11ea-9a58-221600a55839","leaseDurationSeconds":15,"acquireTime":"2019-11-25T15:26:07Z","renewTime":"2019-11-25T15:26:09Z","leaderTransitions":0}'
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+  creationTimestamp: null
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: sonatype-nexus
+    chart: sonatype-nexus-1.21.0
+    fullname: nexus-sonatype-nexus
+    heritage: Tiller
+    release: nexus
+  name: nexus-sonatype-nexus-data
+  selfLink: /api/v1/namespaces/default/persistentvolumeclaims/nexus-sonatype-nexus-data
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: manual
+  volumeMode: Filesystem
+  volumeName: pvc-e6711a7f-0f97-11ea-82a0-02128fb55632
+status: {}
