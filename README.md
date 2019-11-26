@@ -81,5 +81,8 @@ helm install --name SonarQube -f SonarQubeValue.yaml stable/sonarqube
 kubectl create -f PVC.yaml
 ```
 
-8. Jenkins pipeline that using maven to compile git, running SonarQube test and upload war to nexus, create docker image and upload it to nexus registry
+8. Jenkins pipeline that using maven to compile git, running SonarQube test 
+https://github.com/drorvt/jenkinsfile.git
 
+### Next step :
+and upload war to nexus and create docker image and upload it to nexus registry
